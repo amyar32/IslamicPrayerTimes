@@ -32,14 +32,6 @@ export class WaktuSholat {
     return d + m / 60 + s / 3600;
   };
 
-  degToDec(d, m, s) {
-    if (Object.is(d, -0)) {
-      m = Math.abs(m) * -1;
-      s = Math.abs(s) * -1;
-    }
-    return d + m / 60 + s / 3600;
-  }
-
   decToDeg(decimal) {
     let sisaMinute = (decimal - Math.floor(decimal)) * 60;
     let sisaSecond = (sisaMinute - Math.floor(sisaMinute)) * 60;
